@@ -14,9 +14,38 @@
 var UI = (() => { // eslint-disable-line no-unused-vars, no-var
 	'use strict';
 
+	// Map of element/content function pairs to update during navigation.
+	const _updates = new Map();
+
+
 	/*******************************************************************************************************************
 		UI Functions, Core.
 	*******************************************************************************************************************/
+	function uiUpdatesDelete(element) {
+		if (!(element instanceof HTMLElement)) {
+			throw new TypeError('element parameter must be an HTML element');
+		}
+
+		_updates.delete(element);
+	}
+
+	function uiUpdatesSet(element, contentFn) {
+		if (!(element instanceof HTMLElement)) {
+			throw new TypeError('element parameter must be an HTML element');
+		}
+		if (typeof contentFn !== 'function') {
+			throw new TypeError('contentFn parameter must be a function');
+		}
+
+		_updates.set(element, contentFn);
+	}
+
+	function uiUpdatesRun() {
+		_updates.forEach((contentFn, el) => {
+			new Wikifier(el, contentFn());
+		});
+	}
+
 	function uiAssembleLinkList(passage, listEl) {
 		let list = listEl;
 
@@ -698,6 +727,9 @@ var UI = (() => { // eslint-disable-line no-unused-vars, no-var
 		/*
 			UI Functions, Core.
 		*/
+		updatesDelete    : { value : uiUpdatesDelete },
+		updatesSet       : { value : uiUpdatesSet },
+		updatesRun       : { value : uiUpdatesRun },
 		assembleLinkList : { value : uiAssembleLinkList },
 
 		/*
