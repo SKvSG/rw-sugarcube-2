@@ -21,6 +21,10 @@ var UI = (() => { // eslint-disable-line no-unused-vars, no-var
 	/*******************************************************************************************************************
 		UI Functions, Core.
 	*******************************************************************************************************************/
+	function uiUpdatesClear() {
+		_updates.clear();
+	}
+
 	function uiUpdatesDelete(element) {
 		if (!(element instanceof HTMLElement)) {
 			throw new TypeError('element parameter must be an HTML element');
@@ -727,6 +731,7 @@ var UI = (() => { // eslint-disable-line no-unused-vars, no-var
 		/*
 			UI Functions, Core.
 		*/
+		updatesClear     : { value : uiUpdatesClear },
 		updatesDelete    : { value : uiUpdatesDelete },
 		updatesSet       : { value : uiUpdatesSet },
 		updatesRun       : { value : uiUpdatesRun },
