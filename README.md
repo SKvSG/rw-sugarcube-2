@@ -1,10 +1,10 @@
-# SugarCube v2
+#TBD update the readme
+
+# RW SugarCube v2
 
 [SugarCube](http://www.motoslave.net/sugarcube/) is a free (gratis and libre) story format for [Twine/Twee](http://twinery.org/).
 
 Downloads and documentation may be found at [SugarCube website](http://www.motoslave.net/sugarcube/).
-
-If you believe that you've found a bug in SugarCube or simply wish to make a suggestion, you may do so by [creating a new issue](https://github.com/tmedwards/sugarcube-2/issues).  SugarCube also has a [work log](https://github.com/tmedwards/sugarcube-2/projects/1) that may be of interest.
 
 ## INSTALLATION
 
