@@ -16,7 +16,7 @@
 	Version object.
 */
 var version = Object.freeze({
-	title      : 'SugarCube',
+	title      : 'RW SugarCube',
 	major      : '{{BUILD_VERSION_MAJOR}}',
 	minor      : '{{BUILD_VERSION_MINOR}}',
 	patch      : '{{BUILD_VERSION_PATCH}}',
