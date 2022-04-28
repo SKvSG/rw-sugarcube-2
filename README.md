@@ -1,10 +1,12 @@
 #TBD update the readme
 
-# RW SugarCube v2
+# RW SugarCube
 
 [SugarCube](http://www.motoslave.net/sugarcube/) is a free (gratis and libre) story format for [Twine/Twee](http://twinery.org/).
 
 Downloads and documentation may be found at [SugarCube website](http://www.motoslave.net/sugarcube/).
+
+This is an attempt to update it wqith jquery ui and other elements
 
 ## INSTALLATION
 
