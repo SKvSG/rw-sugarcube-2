@@ -1227,6 +1227,7 @@
 			}
 
 			const $link = jQuery(document.createElement(this.name === 'button' ? 'button' : 'a'));
+      //const $link = $(this.name === 'button' ? 'button' : 'a').button();
 			let passage;
 
 			if (typeof this.args[0] === 'object') {
@@ -1282,8 +1283,13 @@
 				$link.addClass('link-internal');
 			}
 
+      if (this.name == 'button'){
+        $link.button()
+      };
 			$link
-				.addClass(`macro-${this.name}`)
+				//.addClass(`macro-${this.name}`)
+        //.addClass(`ui-${this.name}`)
+        //.addClass(`ui-corner-all`)
 				.ariaClick({
 					namespace : '.macros',
 					role      : passage != null ? 'link' : 'button', // lazy equality for null
@@ -2149,6 +2155,7 @@
 			}
 
 			$link
+         //TODO: consider using this code for the button macros
 				.addClass(`macro-${this.name}`)
 				.append($image || document.createTextNode(text || L10n.get(`macro${this.name.toUpperFirst()}Text`)))
 				.appendTo(this.output);

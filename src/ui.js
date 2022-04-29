@@ -218,8 +218,11 @@ var UI = (() => { // eslint-disable-line no-unused-vars, no-var
 			}
 			else {
 				$btn.ariaDisabled(true);
+        $btn.button({disabled: true});
 			}
 
+			$btn.addClass("ui-button");
+			$btn.addClass("ui-corner-all");
 			return jQuery(document.createElement('li'))
 				.append($btn);
 		}
@@ -227,6 +230,7 @@ var UI = (() => { // eslint-disable-line no-unused-vars, no-var
 		function createSaveList() {
 			function createButton(bId, bClass, bText, bSlot, bAction) {
 				const $btn = jQuery(document.createElement('button'))
+        //const $btn = $( "button" ).button() //doesn't work with menu code
 					.attr('id', `saves-${bId}-${bSlot}`)
 					.addClass(bId)
 					.html(bText);
@@ -249,8 +253,10 @@ var UI = (() => { // eslint-disable-line no-unused-vars, no-var
 				}
 				else {
 					$btn.ariaDisabled(true);
+          $btn.button({disabled: true});
 				}
-
+				$btn.addClass("ui-button");
+				$btn.addClass("ui-corner-all");
 				return $btn;
 			}
 
@@ -308,7 +314,7 @@ var UI = (() => { // eslint-disable-line no-unused-vars, no-var
 					);
 
 					// Add the description.
-					$tdDesc.addClass('empty').text('\u2022\u00a0\u00a0\u2022\u00a0\u00a0\u2022');
+          $tdDesc.addClass('empty').text('\u2022\u00a0\u00a0\u2022\u00a0\u00a0\u2022');
 
 					// Add the disabled delete button.
 					$tdDele.append(

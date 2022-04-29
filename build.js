@@ -97,7 +97,8 @@ const CONFIG = {
 		'src/vendor/lz-string.min.js',
 		'src/vendor/FileSaver.min.js',
 		'src/vendor/seedrandom.min.js',
-		'src/vendor/console-hack.min.js'
+		'src/vendor/console-hack.min.js',
+    'src/vendor/jquery-ui.min.js'
 	],
 	twine1 : {
 		build : {
